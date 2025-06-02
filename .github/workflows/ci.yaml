@@ -3,7 +3,7 @@ name: CI
 
 on:
   schedule:
-    -cron: 
+    - cron: '*/5 * * * *'
   push:
     branches: [ main ]
 
