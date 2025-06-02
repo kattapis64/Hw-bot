@@ -7,8 +7,8 @@ from bs4 import BeautifulSoup
 url="https://docs.google.com/spreadsheets/d/1yVRZmrs4Tt5SXWqZ15xbOaJcp1q-N4kCPHUm3tN6kKs/edit?usp=drivesdk"
 def ttt(rawtime):
   r = rawtime.split("-")
- #hewo datee=["มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"]
-  return f"วันที่ {int(r[2])} เดือน {datee[int(r[1])-1]} ปี {r[0]}"
+  dateee=["มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"]
+  return f"วันที่ {int(r[2])} เดือน {dateee[int(r[1])-1]} ปี {r[0]}"
 r=requests.get(url)
 soup=BeautifulSoup(r.text, "html.parser")
 v=soup.text
